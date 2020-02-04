@@ -1,0 +1,306 @@
+/* ------------------------------------------------------
+  Stylesheet Guide
+  ------------------------------------------------------
+
+    1. Global
+        1.1. Fonts
+            1.1.1. Header font - XXX
+            1.1.2. Text font - XXX
+        1.2. General styles
+        1.3. Color scheme
+            1.3.1. Blue (#4aa8fa) - Color scheme
+            1.3.2. Pink (#fa5a88) - Color scheme
+            1.3.3. Green (#2ddf7b) - Color scheme
+        1.4. Typography
+        1.5. Custom class
+        1.6. Icons class
+
+------------------------------------------------------ */
+
+/* ------------------------------------------------------
+    1. Global
+------------------------------------------------------ */
+
+    /* ------------------------------------------------------
+        1.1. Fonts
+    ------------------------------------------------------ */
+
+        /* ------------------------------------------------------
+            1.1.1. Header font - Open Sans
+        ------------------------------------------------------ */
+			
+			/* https://css-tricks.com/snippets/css/using-font-face/ */
+			@font-face {
+			              font-family: "Open Sans";
+			              font-weight: normal;
+			              font-style: normal;
+			              src: url("../fonts/Open-Sans/OpenSans-Regular.eot");
+			              src: url("../fonts/Open-Sans/OpenSans-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Open-Sans/OpenSans-Regular.woff") format("woff"), url("../fonts/Open-Sans/OpenSans-Regular.ttf") format("truetype");
+			            }
+
+
+		/* ------------------------------------------------------
+            1.1.2. Text font - Oswald, Monserrat
+        ------------------------------------------------------ */
+
+            @import url('https://fonts.googleapis.com/css?family=Merriweather|Oswald');
+
+            @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+    /* ------------------------------------------------------
+        1.2. General styles
+    ------------------------------------------------------ */
+
+            body {
+                font-family:  'Oswald', sans-serif;
+                font-size: 90%;
+                color: #666;
+                background-color: #f8f8f8;}
+            li {
+                list-style-image: url("images/icon-plus.png");
+                line-height: 1.6em;}
+            table {
+                border-spacing: 0px;}
+            th, td {
+                padding: 5px 30px 5px 10px;
+                border-spacing: 0px;
+                font-size: 90%;
+                margin: 0px;}
+
+    /* ------------------------------------------------------
+        1.3. Color scheme
+    ------------------------------------------------------ */
+            th, td {
+                text-align: left;
+                background-color: orange;
+                border-top: 1px solid #f1f8fe;
+                border-bottom: 1px solid #cbd2d8;
+                border-right: 1px solid #cbd2d8;}
+            tr.head th {
+                color: #fff;
+                background-color: red;
+                border-bottom: 2px solid #547ca0;
+                border-right: 1px solid #749abe;
+                border-top: 1px solid #90b4d6;
+                text-align: center;
+                text-shadow: -1px -1px 1px #666666;
+                letter-spacing: 0.15em;}
+            td {
+                text-shadow: 1px 1px 1px #ffffff;}
+            tr.even td, tr.even th {
+                background-color: yellow;}
+            body#loc {
+                background-image: url("images/back.jpg");
+            }
+
+    /* ------------------------------------------------------
+        1.4. Typography
+    ------------------------------------------------------ */
+
+            ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+                }
+
+            ul li {
+                display: inline;
+                padding: 10px;
+                float: right;
+            }
+
+            ul li a, 
+            ul a :hover, 
+            ul li a:focus, 
+            ul li a:active {
+            border: none;
+            text-decoration: none;
+            color: inherit;
+            }
+            fieldset {
+                width: 310px;
+                margin-top: 20px;
+                border: 1px solid #d6d6d6;
+                background-color: #ffffff;
+                line-height: 1.6em;}
+            legend {
+                font-style: italic;
+                color: #666666;}
+            
+            figcaption {
+                text-align:center;
+            }
+            fieldset {
+                width: 310px;
+                margin-top: 20px;
+                border: 1px solid #d6d6d6;
+                background-color: #ffffff;
+                line-height: 1.6em;}
+            legend {
+                font-style: italic;
+                color: #666666;}
+
+    /* ------------------------------------------------------
+        1.5. Custom Class
+    ------------------------------------------------------ */
+
+            tr.head th:first-child {
+                /* WebKit is a browser engine used in Apple's Safari browser, Amazon 
+                  Kindle e-book reader, BlackBerry Browser in OS 6 and above.
+
+                  Not all CSS3 properties work well in all browsers. In a way to ensure that web pages
+                  display as expected in their browsers, vendors like Mozilla and Webkit developed their
+                  own browser-compatible properties. With CSS3, many compatibility issues are now resolved.
+                  However, it is not unusual to still see these properties used in stylesheets.
+
+                  */
+
+                /* Webkit property*/
+                -webkit-border-top-left-radius: 5px;
+
+                /* Mozilla property*/
+                -moz-border-radius-topleft: 5px;
+
+                /* CSS3 property*/
+                border-top-left-radius: 5px;
+
+                /* More on border-radius property: https://www.the-art-of-web.com/css/border-radius/ */
+            }
+            tr.head th:last-child {
+                -webkit-border-top-right-radius: 5px;
+                -moz-border-radius-topright: 5px;
+                border-top-right-radius: 5px;}
+
+            input[type="text"] {
+                width: 120px;
+                border: 1px solid #d6d6d6;
+                padding: 2px;
+                outline: none;}
+            input[type="text"]:focus,
+            input[type="text"]:hover {
+                background-color: #d0e2f0;
+                border: 1px solid #999999;}
+            input[type="submit"] {
+                border: 1px solid #006633;
+                background-color: #009966;
+                color: #ffffff;
+                border-radius: 5px;
+                padding: 5px;
+                margin-top: 10px;}
+            input[type="submit"]:hover {
+                border: 1px solid #006633;
+                background-color: #00CC33;
+                color: #ffffff;
+                cursor: pointer;}
+            .title {
+                float: left;
+                width: 160px;
+                clear: left;}
+            .submit {
+                width: 310px;
+                text-align: right;}
+            
+            #page {
+                max-width: 940px;
+                min-width: 720px;
+                margin: 10px auto 10px auto;
+                
+                border: 4px  #000;
+                background-color: #ffffff;
+                vertical-align: baseline;
+            }
+            .center-mid-1{
+                width: 940px;
+                background-color: #e0e9f0;
+                padding-bottom: 15px;
+                padding-top: 5px;
+                }
+
+            .center-mid-2{
+                width: 940px;
+                background-color: #efeae6;
+                padding-bottom: 15px;
+                padding-top: 5px;
+                }
+
+            .center-mid-3{
+                width: 940px;
+                background-color: dodgerblue;
+                padding-bottom: 15px;
+                padding-top: 5px;
+                }
+
+            .center-2{
+                width: 940px;
+                margin: auto;
+                padding-bottom: 15px;
+                padding-top: 5px;
+                }
+            
+            .center-3{
+                width: 300px;
+                margin: 0 0;
+                }
+
+            .img-1{
+                margin: auto;
+                width: 100%;
+            }
+            [class^="img-2"]{
+                margin: auto;
+                width: 30%;
+            }
+            .center-text {
+                text-align: center;
+            }
+            .center-2>h1, .center-2>p{
+                text-align: center;
+            }
+            
+            h1.center-text
+            {
+                font-family: 'Merriweather', serif;
+                font-size: 550%;
+            }
+            p.center-text{
+                font-family: 'Montserrat', sans-serif;
+            }
+            .img-2b {
+                padding-left: 10px;
+            }
+            .footer {
+                text-align: center;
+            }
+            #map {
+                float:right;
+                margin:20px;
+            }
+            legend {
+                background-color:#ffffff;
+            }
+            /*The legend is centered with a white background to enhance visibility*/
+            .img-3 {
+                min-width: 300px;
+                min-height: 300px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                padding:20px;
+            }
+            }
+
+            .menu-holder {
+            float: right;
+            max-width: 80%;
+            position: fixed;
+            text-align: center;
+            height: 100%;
+            background-color: #ffffff;
+            right: -100%;
+            top: 0;
+            transition: right .3s ease;
+            width: 100%;
+            overflow: auto;
+            max-width: 100%;
+            z-index: 99;
+             }     
